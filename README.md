@@ -142,7 +142,7 @@ Flask is called a "microframework" because it is designed to be minimalistic and
 
 ## Everything about Flask Configurations
 
-Sure! Let's talk about Flask configurations. When you're building a Flask application, configurations are settings that control how the app behaves. These settings can include things like the database connection details, the secret key for sessions, debugging options, and more. Understanding Flask configurations helps you customize your app to work the way you want.
+These settings can include things like the database connection details, the secret key for sessions, debugging options, and more. Understanding Flask configurations helps you customize your app to work the way you want.
 
 ### Basic Configuration
 Here are some basic configuration options you might see in a Flask app:
