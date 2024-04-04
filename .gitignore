@@ -1,1 +1,5 @@
 *.pyc
+
+materials/Chapter-1/build
+materials/Chapter-1/dist
+materials/Chapter-1/my_app.egg-info

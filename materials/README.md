@@ -58,7 +58,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 ## Get to Know the Author
 
-**Shalabh Aggarwal** 
+**Hung Nguyen** 
 has more than 13 years' experience in developing and managing enterprise systems, as well as web and mobile applications for small-to large-scale industries. He started his career working on Python, and although he now works on multiple technologies, he remains a Python developer at heart. He is passionate about open source technologies and writes highly readable and quality code.
 He is a seasoned engineering leader who loves building engineering teams and products from scratch across multiple domains while leveraging different technologies.
 He is also active in voluntary training for engineering students on non-conventional and open source topics. When not working with full-time assignments, he consults for start-ups on leveraging different technologies. When not writing code, he writes technical and non-technical literature, which is published across multiple blogs.

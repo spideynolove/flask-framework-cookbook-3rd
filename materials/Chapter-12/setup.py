@@ -7,8 +7,8 @@ setup(
     name = 'my_app',
     version='1.0',
     license='GNU General Public License v3',
-    author='Shalabh Aggarwal',
-    author_email='contact@shalabhaggarwal.com',
+    author='Hung Nguyen',
+    author_email='spideynolove@gmail.com',
     description='Catalog application for Flask',
     packages=[
         'my_app',
