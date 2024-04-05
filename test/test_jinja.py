@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/hello')
 @app.route('/hello/<user>')
 def hello_world(user=None):
-    user = user or 'Hung'
+    user = user or 'Hung'   # good practice to use default value
     # python format string
     return '''
 <html>

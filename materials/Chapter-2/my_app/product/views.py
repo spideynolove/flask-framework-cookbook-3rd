@@ -11,13 +11,17 @@ product_blueprint = Blueprint('product', __name__)
 def some_processor():
     def full_name(prod):
         return '{0} / {1}'.format(prod['category'], prod['name'])
-    return {'full_name': full_name}
+
+    def nick_name(prod):
+        return '{0} ({1})'.format(prod['name'], prod['nickname'])
+    return {'full_name': full_name, 'nick_name': nick_name}
 
 
 @product_blueprint.route('/')
 @product_blueprint.route('/home')
 def home():
     return render_template('home.html', products=PRODUCTS, timestamp=datetime.now())
+
 
 @product_blueprint.route('/product/<key>')
 def product(key):

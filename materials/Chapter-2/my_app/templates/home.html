@@ -2,23 +2,23 @@
 
 {% block container %}
 <p>Current time: {{ momentjs(timestamp).calendar() }}</p>
-<br/>
+<br />
 <p>Time: {{momentjs(timestamp).format('YYYY-MM-DD HH:mm:ss')}}</p>
-<br/>
+<br />
 <p>From now: {{momentjs(timestamp).fromNow()}}</p>
 
-  <div class="top-pad">
-    {% for id, product in products.items() %}
-    <div class="top-pad offset-1 col-sm-10">
-      <div class="card text-center">
-        <div class="card-body">
-          <h2>
-            <a href="{{ url_for('product.product', key=id) }}">{{ product['name'] }}</a>
-            <small>$ {{ product['price'] }}</small>
-          </h2>
-        </div>
+<div class="top-pad">
+  {% for id, product in products.items() %}
+  <div class="top-pad offset-1 col-sm-10">
+    <div class="card text-center">
+      <div class="card-body">
+        <h2>
+          <a href="{{ url_for('product.product', key=id) }}">{{ product['name'] }}</a>
+          <small>$ {{ product['price'] }}</small>
+        </h2>
       </div>
     </div>
-    {% endfor %}
   </div>
+  {% endfor %}
+</div>
 {% endblock %}
