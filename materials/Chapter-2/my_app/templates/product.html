@@ -3,7 +3,8 @@
 {% block container %}
 <div class="top-pad">
   <h4>{{ full_name(product) }}</h4>
-  <h1>{{ product['name'] }}</h1>
+  <!-- <h1>{{ product['name'] }}</h1> -->
+  <h1 class="{{ product['name'] | product_color }}">{{ product['name'] }}</h1>
   <p>Nickname/IMEI: {{ nick_name(product) }}</p>
   <h3><small>{{ product['category'] }}</small></h3>
   <h3>{{ product['price']|format_currency }}</h3>

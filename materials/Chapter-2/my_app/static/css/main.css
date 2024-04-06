@@ -5,4 +5,34 @@ body {
   padding: 10px 15px;
   text-align: center;
 }
+.orange-text {
+  color: orange;
+}
 
+.purple-text {
+  color: purple;
+}
+
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
+}
+
+.blue-text {
+  color: blue;
+}
+
+.yellow-text {
+  color: yellow;
+}
+
+.cyan-text {
+  color: cyan;
+}
+
+.pink-text {
+  color: pink;
+}
