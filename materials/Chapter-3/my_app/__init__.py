@@ -4,7 +4,7 @@ from redis import Redis
 
 
 app = Flask(__name__)
-app.config['MONGODB_SETTINGS'] = {'DB': 'my_catalog'}
+app.config['MONGODB_SETTINGS'] = {'flask_db': 'my_catalog'}
 app.debug = True
 db = MongoEngine(app)
 

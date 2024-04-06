@@ -1,3 +1,9 @@
 Flask
 SQLAlchemy
+Flask-SQLAlchemy
+Flask-Migrate
 ccy
+alembic
+psycopg2
+psycopg2-binary
+flask-mongoengine

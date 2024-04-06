@@ -13,13 +13,13 @@ def home():
 
 @catalog.route('/product/<key>')
 def product(key):
-    product = Product.objects.get_or_404(key=key)
+    product = Product.query.get_or_404(key=key)
     return 'Product - %s, $%s' % (product.name, product.price)
 
 
 @catalog.route('/products')
 def products():
-    products = Product.objects.all()
+    products = Product.query.all()
     res = {}
     for product in products:
         res[product.key] = {
