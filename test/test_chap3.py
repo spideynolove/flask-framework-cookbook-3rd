@@ -4,6 +4,11 @@ from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/hung/sqlite3/database/app.sqlite3'
+
+# from urllib.parse import quote_plus
+# password = quote_plus('Hung@124191')
+# app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://hungnm17:{password}@localhost/postgres_db'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
