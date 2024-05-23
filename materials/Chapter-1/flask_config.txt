@@ -1,0 +1,57 @@
+$ pip3 install Flask
+
+$ export FLASK_APP=app.py
+$ flask run
+$ python3 -m flask run
+
+Setting up a virtual environment
+
+• https://pypi.python.org/pypi/Flask
+• https://pypi.python.org/pypi/Werkzeug
+• https://pypi.python.org/pypi/Jinja2
+• https://pypi.python.org/pypi/itsdangerous
+• https://pypi.python.org/pypi/MarkupSafe
+• https://pypi.python.org/pypi/click
+
+# Handling basic configurations
+app.config['DEBUG'] = True
+$ export FLASK_DEBUG=1 ~ app.debug = True ~ 
+
+app.config.from_pyfile('myconfig.cfg')
+app.config.from_object('myapplication.default_settings')
+
+# load from the same file from which this command is run,
+app.config.from_object(__name__)
+
+# From an environment variable
+app.config.from_envvar('PATH_TO_CONFIG_FILE')
+
+# From file
+app.config.from_file('config.json', load=json.load)
+app.config.from_file('config.toml', load=toml.load)
+
+# The best practice when using configurations is to have a bunch of default settings in app.py, or via
+any object in the application itself
+app = Flask(__name__)
+DEBUG = True
+TESTING = True
+app.config.from_object(__name__)
+app.config.from_pyfile('/path/to/config/file')
+
+# Configuring using class-based settings
+# Organizing static files
+
+# Being deployment-specific with the instance folder (the instance folder concept is completely 
+independent of configuration, and instance_relative_config just complements the configuration object.)
+- instance_path='/absolute/path/to/instance/folder')
+- app = Flask(__name__, instance_relative_config=True)
+
+# Composition of views and models
+# makes the two modules dependent on each other,
+
+# Creating a modular web app with blueprints
+app.register_blueprint(hello)
+from flask import Blueprint
+hello = Blueprint('hello', __name__)
+
+# Installing a Flask app can be easily achieved using the setuptools Python library.

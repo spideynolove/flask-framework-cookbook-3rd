@@ -1,0 +1,19 @@
+# how to design and develop applications with modular and extensible templates.
+
+# third-party templating engine.
+
+# structure our views code
+
+# Flask follow a specific pattern of laying out templates.
+- templates to be placed inside a folder named templates
+- render_template()
+
+# Implementing block composition and layout inheritance
+- headers and footers will appear the same on almost all pages
+- other examples are "Creating custom 404 and 500 handlers"
+
+# a base template to house the common code that can be inherited by all the other templates
+- The home.html file inherits from base.html
+- product.html inherits from home.html
+
+# Creating a custom context processor
