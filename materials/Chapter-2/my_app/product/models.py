@@ -68,31 +68,68 @@ PRODUCTS = {
     # Add more products as needed
 }
 
-
-# # Updated PRODUCTS with Japanese names and nicknames
-# PRODUCTS = {
-#     'Iphone': {
-#         'name': 'アイフォン 5S',
-#         'category': 'スマートフォン',
-#         'price': 699,
-#         'nickname': 'アップル5S-12345'
-#     },
-#     'galaxy': {
-#         'name': 'サムスンギャラクシー 5',
-#         'category': 'スマートフォン',
-#         'price': 649,
-#         'nickname': 'ギャラクシー5-67890'
-#     },
-#     'ipad-air': {
-#         'name': 'アイパッド エア',
-#         'category': 'タブレット',
-#         'price': 649,
-#         'nickname': 'エア-54321'
-#     },
-#     'ipad-mini': {
-#         'name': 'アイパッド ミニ',
-#         'category': 'タブレット',
-#         'price': 549,
-#         'nickname': 'ミニ-09876'
-#     }
-# }
+LOCATIONS = {
+    'new_york': {
+        'name': 'New York',
+        'category': 'City',
+        'population': 8419000,
+        'nickname': 'Big Apple',
+        'image': 'new_york.jpg'
+    },
+    'los_angeles': {
+        'name': 'Los Angeles',
+        'category': 'City',
+        'population': 3980000,
+        'nickname': 'City of Angels',
+        'image': 'los_angeles.jpg'
+    },
+    'chicago': {
+        'name': 'Chicago',
+        'category': 'City',
+        'population': 2716000,
+        'nickname': 'Windy City',
+        'image': 'chicago.jpg'
+    },
+    'london': {
+        'name': 'London',
+        'category': 'City',
+        'population': 8788000,
+        'nickname': 'The Square Mile',
+        'image': 'london.jpg'
+    },
+    'paris': {
+        'name': 'Paris',
+        'category': 'City',
+        'population': 2240000,
+        'nickname': 'City of Light',
+        'image': 'paris.jpg'
+    },
+    'barcelona': {
+        'name': 'Barcelona',
+        'category': 'City',
+        'population': 1620000,
+        'nickname': 'City of Counts',
+        'image': 'barcelona.jpg'
+    },
+    'tokyo': {
+        'name': 'Tokyo',
+        'category': 'City',
+        'population': 13900000,
+        'nickname': 'Eastern Capital',
+        'image': 'tokyo.jpg'
+    },
+    'beijing': {
+        'name': 'Beijing',
+        'category': 'City',
+        'population': 21500000,
+        'nickname': 'Northern Capital',
+        'image': 'beijing.jpg'
+    },
+    'mumbai': {
+        'name': 'Mumbai',
+        'category': 'City',
+        'population': 18400000,
+        'nickname': 'City of Dreams',
+        'image': 'mumbai.jpg'
+    },
+}

@@ -9,22 +9,19 @@
   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
   <script src="{{ url_for('static', filename='js/moment.min.js') }}"></script>
-  <!-- <script>
-    var now = new momentjs('{{ timestamp }}');
-    console.log(now.format('YYYY-MM-DD')); // Example usage
-    console.log(now.calendar());
-    console.log(now.fromNow());
-  </script> -->
 </head>
 
 <body>
   <nav class="navbar navbar-dark bg-dark fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="{{ url_for('product.home') }}">Smart Phone list</a>
+        <a class="navbar-brand" href="{{ url_for('product.home') }}">Smart Phone List</a>
       </div>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" href="{{ url_for('product.show_locations') }}">Locations</a></li>
+      </ul>
+    </div>
   </nav>
-  </div>
   <div class="container">
     {% block container %}{% endblock %}
   </div>
