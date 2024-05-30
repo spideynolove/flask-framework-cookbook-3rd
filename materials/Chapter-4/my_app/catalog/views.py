@@ -1,6 +1,5 @@
 from functools import wraps
-from flask import request, Blueprint, render_template, jsonify, flash, \
-    redirect, url_for
+from flask import request, Blueprint, render_template, jsonify, flash, redirect, url_for
 from my_app import db, app
 from my_app.catalog.models import Product, Category
 # from sqlalchemy.orm.util import join
@@ -49,20 +48,21 @@ def product(id):
 @catalog.route('/products')
 @catalog.route('/products/<int:page>')
 def products(page=1):
-    products = Product.query.paginate(page=page, per_page=10)
+    products = Product.query.paginate(page=page, per_page=5)
     return render_template('products.html', products=products)
 
 
 @catalog.route('/product-create', methods=['GET', 'POST'])
 def create_product():
     if request.method == 'POST':
+        key = request.form.get('key')
         name = request.form.get('name')
         price = request.form.get('price')
         categ_name = request.form.get('category')
         category = Category.query.filter_by(name=categ_name).first()
         if not category:
             category = Category(categ_name)
-        product = Product(name, price, category)
+        product = Product(key, name, price, category)
         db.session.add(product)
         db.session.commit()
         flash('The product %s has been created' % name, 'success')
@@ -89,7 +89,7 @@ def product_search(page=1):
             Category.name.like('%' + category + '%')
         )
     return render_template(
-        'products.html', products=products.paginate(page=page, per_page=10)
+        'products.html', products=products.paginate(page=page, per_page=5)
     )
 
 
