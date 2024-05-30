@@ -2,8 +2,16 @@ Flask
 SQLAlchemy
 Flask-SQLAlchemy
 Flask-Migrate
+Flask-WTF
+flask-debugtoolbar
 ccy
 alembic
 psycopg2-binary
-flask-mongoengine
+# flask-mongoengine
+# flask-mongoengine[wtf,toolbar]
+flask-mongoengine-3[wtf,toolbar]
 pillow
+redis
+redis[hiredis]
+redis-om
+requests

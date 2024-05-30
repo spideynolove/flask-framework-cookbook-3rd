@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/pymongo/common.py", line 814, in _get_validator
+    return validators[normed_key]
+           ~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'flask_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/mongoengine/connection.py", line 377, in _create_connection
+    return mongo_client_class(**connection_settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/pymongo/mongo_client.py", line 813, in __init__
+    dict(common.validate(keyword_opts.cased_key(k), v) for k, v in keyword_opts.items())
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/pymongo/mongo_client.py", line 813, in <genexpr>
+    dict(common.validate(keyword_opts.cased_key(k), v) for k, v in keyword_opts.items())
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/pymongo/common.py", line 822, in validate
+    validator = _get_validator(option, VALIDATORS, normed_key=option.lower())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/pymongo/common.py", line 817, in _get_validator
+    raise_config_error(key, suggestions)
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/pymongo/common.py", line 171, in raise_config_error
+    raise ConfigurationError(msg)
+pymongo.errors.ConfigurationError: Unknown option: flask_db. Did you mean one of (loadbalanced, password, tls) or maybe a camelCase version of one? Refer to docstring.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hung/Documents/LEARN/web/flask-framework-cookbook-3rd/materials/Chapter-3/run.py", line 1, in <module>
+    from my_app import app
+  File "/home/hung/Documents/LEARN/web/flask-framework-cookbook-3rd/materials/Chapter-3/my_app/__init__.py", line 9, in <module>
+    db = MongoEngine(app)
+         ^^^^^^^^^^^^^^^^
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/flask_mongoengine/__init__.py", line 85, in __init__
+    self.init_app(app, config)
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/flask_mongoengine/__init__.py", line 125, in init_app
+    connections = create_connections(self.config)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/flask_mongoengine/connection.py", line 128, in create_connections
+    connections[alias] = mongoengine.connect(**connection_setting)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/mongoengine/connection.py", line 467, in connect
+    return get_connection(alias)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/mongoengine/connection.py", line 364, in get_connection
+    connection = _create_connection(
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/hung/.local/share/virtualenvs/web-Xv6WTt7C/lib/python3.11/site-packages/mongoengine/connection.py", line 379, in _create_connection
+    raise ConnectionFailure(f"Cannot connect to database {alias} :\n{e}")
+mongoengine.connection.ConnectionFailure: Cannot connect to database default :
+Unknown option: flask_db. Did you mean one of (loadbalanced, password, tls) or maybe a camelCase version of one? Refer to docstring.
