@@ -69,7 +69,7 @@ def create_product():
     form = ProductForm()
 
     if form.validate_on_submit():
-        key = form.name.key
+        # key = form.key.data
         name = form.name.data
         price = form.price.data
         category = Category.query.get_or_404(form.category.data)

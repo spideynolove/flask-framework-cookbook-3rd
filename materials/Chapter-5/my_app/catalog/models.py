@@ -11,6 +11,7 @@ from my_app import db
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    # key = db.Column(db.String(255))
     name = db.Column(db.String(255))
     price = db.Column(db.Float)
     category_id = db.Column(db.Integer, db.ForeignKey("category.id"))
@@ -19,8 +20,8 @@ class Product(db.Model):
     )
     image_path = db.Column(db.String(255))
 
-    def __init__(self, key, name, price, category, image_path):
-        self.key = key
+    def __init__(self, name, price, category, image_path):
+        # self.key = key
         self.name = name
         self.price = price
         self.category = category

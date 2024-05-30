@@ -1,7 +1,7 @@
 import requests
 
 items = {
-    # "iphone-12": {"name": "iPhone 12", "price": 999.0},
+    # "iphone-12": {"name": "iPhone 12", "price": 999.0},   # for the first app
     
     # "ipad-pro": {"name": "iPad Pro", "price": 799.0},
     # "macbook-pro": {"name": "MacBook Pro", "price": 1499.0},
@@ -30,22 +30,24 @@ items = {
     # "hp-omen": {"name": "HP Omen", "price": 199.0},
     # "dell-g": {"name": "Dell G", "price": 299.0},
 
-    "iphone-12": {"name": "iPhone 12", "price": 999.0, 'category': 'smartphone'},
-    "ipad-pro": {"name": "iPad Pro", "price": 799.0, 'category': 'tablet'},
-    "macbook-pro": {"name": "MacBook Pro", "price": 1499.0, 'category': 'laptop'},
-    "samsumg-galaxy": {"name": "Samsung Galaxy", "price": 499.0, 'category': 'smartphone'},
-    "alienware-area": {"name": "Alienware Area", "price": 299.0, 'category': 'laptop'},
-    "motorola-edge": {"name": "Motorola Edge", "price": 299.0, 'category': 'smartphone'},
-    "asus-rog": {"name": "Asus ROG", "price": 299.0, 'category': 'laptop'},
-    "realme-pro": {"name": "Realme Pro", "price": 199.0, 'category': 'smartphone'},
-    "dell-g": {"name": "Dell G", "price": 299.0, 'category': 'laptop'},
-    "htc-u": {"name": "HTC U", "price": 199.0, 'category': 'smartphone'},
-    "hp-omen": {"name": "HP Omen", "price": 199.0, 'category': 'laptop'},
-    "nokia-lumia": {"name": "Nokia Lumia", "price": 199.0, 'category': 'smartphone'},
-    "acer-predator": {"name": "Acer Predator", "price": 199.0, 'category': 'laptop'},
-    "blackberry-key": {"name": "Blackberry Key", "price": 299.0, 'category': 'smartphone'},
-    "msi-gaming": {"name": "MSI Gaming", "price": 299.0, 'category': 'laptop'},
-    "vivo-x": {"name": "Vivo X", "price": 299.0, 'category': 'smartphone'},
+    # "iphone-12": {"name": "iPhone 12", "price": 999.0, 'category': 'smartphone'},   # for the second app
+    # "ipad-pro": {"name": "iPad Pro", "price": 799.0, 'category': 'tablet'},
+    # "macbook-pro": {"name": "MacBook Pro", "price": 1499.0, 'category': 'laptop'},
+    # "samsumg-galaxy": {"name": "Samsung Galaxy", "price": 499.0, 'category': 'smartphone'},
+    # "alienware-area": {"name": "Alienware Area", "price": 299.0, 'category': 'laptop'},
+    # "motorola-edge": {"name": "Motorola Edge", "price": 299.0, 'category': 'smartphone'},
+    # "asus-rog": {"name": "Asus ROG", "price": 299.0, 'category': 'laptop'},
+    # "realme-pro": {"name": "Realme Pro", "price": 199.0, 'category': 'smartphone'},
+    # "dell-g": {"name": "Dell G", "price": 299.0, 'category': 'laptop'},
+    # "htc-u": {"name": "HTC U", "price": 199.0, 'category': 'smartphone'},
+    # "hp-omen": {"name": "HP Omen", "price": 199.0, 'category': 'laptop'},
+    # "nokia-lumia": {"name": "Nokia Lumia", "price": 199.0, 'category': 'smartphone'},
+    # "acer-predator": {"name": "Acer Predator", "price": 199.0, 'category': 'laptop'},
+    # "blackberry-key": {"name": "Blackberry Key", "price": 299.0, 'category': 'smartphone'},
+    # "msi-gaming": {"name": "MSI Gaming", "price": 299.0, 'category': 'laptop'},
+    # "vivo-x": {"name": "Vivo X", "price": 299.0, 'category': 'smartphone'},
+
+    # "iphone-12": {"name": "iPhone 12", "price": 999.0, 'category': 'smartphone', },
 }
 
 for item in items:
