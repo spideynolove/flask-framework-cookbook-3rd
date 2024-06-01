@@ -29,11 +29,11 @@ def get_ldap_connection():
 	return conn
 
 
-from my_app.auth.views import auth, facebook_blueprint, google_blueprint, twitter_blueprint
+from my_app.auth.views import auth, facebook_blueprint, google_blueprint	#, twitter_blueprint
 app.register_blueprint(auth)
 app.register_blueprint(facebook_blueprint)
 app.register_blueprint(google_blueprint)
-app.register_blueprint(twitter_blueprint)
+# app.register_blueprint(twitter_blueprint)
 
 
 with app.app_context():

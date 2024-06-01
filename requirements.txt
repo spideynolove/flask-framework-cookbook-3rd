@@ -1,16 +1,19 @@
+# SQLAlchemy
+alembic
+ccy
 Flask
-SQLAlchemy
+Flask-Admin
 Flask-SQLAlchemy
 Flask-Migrate
 Flask-WTF
+Flask-Login
+Flask-Dance
+Flask-RESTful
 flask-debugtoolbar
-ccy
-alembic
-psycopg2-binary
-# flask-mongoengine
-# flask-mongoengine[wtf,toolbar]
 flask-mongoengine-3[wtf,toolbar]
 pillow
+psycopg2-binary
+python-ldap
 redis
 redis[hiredis]
 redis-om

@@ -3,7 +3,8 @@ from functools import wraps
 from flask import request, Blueprint, render_template, jsonify, flash, \
     redirect, url_for, abort
 from flask_restful import Resource, reqparse
-from sqlalchemy.orm.util import join
+# from sqlalchemy.orm.util import join
+from sqlalchemy.orm import join
 
 from my_app import db, app, api
 from my_app.catalog.models import Product, Category
@@ -28,7 +29,9 @@ def template_or_json(template=None):
         @wraps(f)
         def decorated_fn(*args, **kwargs):
             ctx = f(*args, **kwargs)
-            if request.is_xhr or not template:
+            # if request.is_xhr or not template:
+            # if request.headers.get("X-Requested-With") == "XMLHttpRequest" or not template:
+            if request.accept_mimetypes.best == 'application/json' or not template:
                 return jsonify(ctx)
             else:
                 return render_template(template, **ctx)
