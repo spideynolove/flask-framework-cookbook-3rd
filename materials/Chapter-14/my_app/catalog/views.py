@@ -1,7 +1,6 @@
 import openai
 from functools import wraps
-from flask import request, Blueprint, render_template, jsonify, flash, \
-    redirect, url_for
+from flask import request, Blueprint, render_template, jsonify, flash,redirect, url_for
 from my_app import db, app
 from my_app.catalog.models import Product, Category
 from sqlalchemy.orm import join

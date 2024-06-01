@@ -1,11 +1,9 @@
 import json
 from threading import Thread
 from functools import wraps
-from flask import request, Blueprint, render_template, jsonify, flash, \
-    redirect, url_for
+from flask import request, Blueprint, render_template, jsonify, flash,redirect, url_for
 from my_app import db, app, es, cache, mail, celery
-from my_app.catalog.models import Product, Category, product_created, \
-    category_created
+from my_app.catalog.models import Product, Category, product_created,category_created
 from sqlalchemy.orm import join
 from flask_mail import Message
 

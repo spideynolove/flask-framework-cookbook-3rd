@@ -1,18 +1,14 @@
 from functools import wraps
 from werkzeug.security import generate_password_hash
-from flask import request, render_template, flash, redirect, url_for, \
-    session, Blueprint, g, abort
-from flask_login import current_user, login_user, logout_user, \
-    login_required
+from flask import request, render_template, flash, redirect, url_for,session, Blueprint, g, abort
+from flask_login import current_user, login_user, logout_user,login_required
 from wtforms import PasswordField
 from my_app import db, login_manager
 from flask_admin import BaseView, expose, AdminIndexView
 from flask_admin.form import rules
 from flask_admin.contrib.sqla import ModelView
 from flask_admin.actions import ActionsMixin
-from my_app.auth.models import User, RegistrationForm, LoginForm, \
-    AdminUserCreateForm, AdminUserUpdateForm, generate_password_hash, \
-    CKTextAreaField
+from my_app.auth.models import User, RegistrationForm, LoginForm,AdminUserCreateForm, AdminUserUpdateForm, generate_password_hash,CKTextAreaField
 
 auth = Blueprint('auth', __name__)
 

@@ -2,11 +2,9 @@ import openai
 import os
 from functools import wraps
 from werkzeug.utils import secure_filename
-from flask import request, Blueprint, render_template, jsonify, flash, \
-    redirect, url_for
+from flask import request, Blueprint, render_template, jsonify, flash,redirect, url_for
 from my_app import db, app, ALLOWED_EXTENSIONS
-from my_app.catalog.models import Product, Category, ProductForm, \
-    CategoryForm, ProductGPTForm
+from my_app.catalog.models import Product, Category, ProductForm,CategoryForm, ProductGPTForm
 from sqlalchemy.orm import join
 import requests
 

@@ -14,6 +14,7 @@ ALLOWED_LANGUAGES = {
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = os.path.realpath('.') + '/my_app/static/uploads'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/hung/sqlite3/database/test_4.db'
 app.config['WTF_CSRF_SECRET_KEY'] = 'random key for form'
 db = SQLAlchemy(app)
 

@@ -1,8 +1,7 @@
 import os
 from functools import wraps
 from werkzeug.utils import secure_filename
-from flask import request, Blueprint, render_template, jsonify, flash, \
-    redirect, url_for as flask_url_for, g
+from flask import request, Blueprint, render_template, jsonify, flash,redirect, url_for as flask_url_for, g
 from my_app import db, app, ALLOWED_EXTENSIONS, babel
 from my_app.catalog.models import Product, Category, ProductForm, CategoryForm
 from sqlalchemy.orm import join

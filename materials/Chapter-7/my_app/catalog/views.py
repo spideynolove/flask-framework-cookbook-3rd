@@ -1,7 +1,6 @@
 import json
 from functools import wraps
-from flask import request, Blueprint, render_template, jsonify, flash, \
-    redirect, url_for, abort
+from flask import request, Blueprint, render_template, jsonify, flash,redirect, url_for, abort
 from flask_restful import Resource, reqparse
 # from sqlalchemy.orm.util import join
 from sqlalchemy.orm import join

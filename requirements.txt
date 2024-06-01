@@ -1,17 +1,23 @@
 # SQLAlchemy
 alembic
+boto3
 ccy
+coverage
 Flask
 Flask-Admin
-Flask-SQLAlchemy
-Flask-Migrate
-Flask-WTF
-Flask-Login
 Flask-Dance
+Flask-Mail
+Flask-Migrate
+Flask-Login
 Flask-RESTful
+Flask-SQLAlchemy
+Flask-WTF
+flask-babel
 flask-debugtoolbar
 flask-mongoengine-3[wtf,toolbar]
+geoip2
 pillow
+openai
 psycopg2-binary
 python-ldap
 redis
