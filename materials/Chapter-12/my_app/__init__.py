@@ -14,6 +14,7 @@ ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 ALLOWED_LANGUAGES = {
     'en': 'English',
     'fr': 'French',
+    'jp': 'Japanese',
 }
 
 RECEPIENTS = ['some_receiver@gmail.com']
@@ -32,7 +33,7 @@ def create_app(alt_config={}):
     )
 
     app.config['UPLOAD_FOLDER'] = os.path.realpath('.') + '/my_app/static/uploads'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test_4.db'
     app.config['WTF_CSRF_SECRET_KEY'] = 'random key for form'
     app.config['LOG_FILE'] = 'application.log'
     app.config['AWS_ACCESS_KEY'] = 'Amazon Access Key'

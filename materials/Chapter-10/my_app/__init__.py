@@ -29,7 +29,7 @@ def create_app(alt_config={}):
     )
 
     app.config['UPLOAD_FOLDER'] = os.path.realpath('.') + '/my_app/static/uploads'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test_2.db'
     app.config['WTF_CSRF_SECRET_KEY'] = 'random key for form'
     app.config['LOG_FILE'] = 'application.log'
 
@@ -57,6 +57,8 @@ def create_app(alt_config={}):
     app.secret_key = 'some_random_key'
 
     return app
+
+from flask import g # fix ???
 
 def create_db(app):
     db.init_app(app)

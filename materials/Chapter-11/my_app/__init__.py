@@ -32,7 +32,7 @@ def create_app(alt_config={}):
     )
 
     app.config['UPLOAD_FOLDER'] = os.path.realpath('.') + '/my_app/static/uploads'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test_3.db'
     app.config['WTF_CSRF_SECRET_KEY'] = 'random key for form'
     app.config['LOG_FILE'] = 'application.log'
     app.config['AWS_ACCESS_KEY'] = 'Amazon Access Key'
